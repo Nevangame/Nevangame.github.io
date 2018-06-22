@@ -1,0 +1,164 @@
+﻿#frame
+{
+
+ width:1000px; /*ширина*/
+ background-image:url("back.png");
+ margin:0 auto;/*выравниваем по центру*/
+ display: table;/*представляем как таблицу*/
+
+ }
+  header
+ {
+ width:90%;
+ height:40px;/*высота*/
+ background-image:url("Hat.jpg");
+ margin:0 auto;/*выравниваем по центру*/
+ margin-top:10px;/*отступ от верхней границы сайта*/
+ padding:10px;/*внутренний отступ*/
+ text-align:center;/*выравнивание текста по центру*/
+ font-size:20px;
+ }
+ /* меню*/
+  /* меню*/
+ nav
+ {
+ background:#9370DB;
+ height:30px;
+ margin:10px;
+ color:Black;
+ font-size:20px;
+ font-family:Comic Sans MS;
+ }
+ li a
+ {
+ text-decoration:none;/*избавляемся от подчеркивания ссылок*/
+
+ }
+ #main
+ {
+ margin:0px;
+ padding:0px;
+ }
+ #main li
+ { list-style: none; /*убираем маркеры*/
+ display:inline-block; /*делаем меню горизонтальным*/
+ position:relative;
+ }
+
+ #main li menu
+ {
+ position:absolute;/*чтобы двигался только второй уровень меню*/
+ background-color:#9370DB;
+ margin:0px;/*чтоб второй уровень и не отрывался от первого*/
+ }
+ li menu
+ {
+ display: none;/*вложенные пункты скрываем*/
+ }
+
+ #main li:hover menu{/*при наведении на первый уровень вложенные пункты второго
+появляются*/
+ display: block;
+ } 
+
+  main
+ {
+
+ height:400px; /*задаем явное значение, т.к. иначе без текста блок не будет
+отображаться в "нормальном" размере*/
+ width:65%;
+ background-color:#FFFAFA;
+ margin:10px;
+ float:left;/*размещаем блок слева*/
+ padding:10px;
+ }
+
+  aside
+ {
+ background-color:#F5FFFA;
+ width:25%;
+ height:300px;
+ margin:10px;
+ float:right;
+ }
+
+  article
+ {
+ font-family:Arial;
+ font-size:14pt;
+
+ }
+
+  footer
+ {
+ display:table-row; /*представляем как строку*/
+ width:90%;
+ height:50px;/*высота*/
+ background-color:#00FFFF;
+ margin:0 auto;/*выравниваем по центру*/
+ margin-top:10px;/*отступ от верхней границы сайта*/
+ padding:20px;/*внутренний отступ*/
+ text-align:left;/*выравнивание текста по центру*/
+ } 
+ @keyframes anim
+{ /*anim - имя анимации*/
+from {margin-left:0px;} /*оформление элемента в начале анимации*/
+to {margin-left: 365px;}/*оформление элемента в конце анимации*/
+}
+@keyframes anim_back
+{
+from{margin-left: 365px;}
+to {margin-left: 0px;}
+}
+/*для Mozilla Firefox*/
+@-moz-keyframes anim
+{
+from {margin-left:0px;}
+to {margin-left: 365px;}
+}
+@-moz-keyframes anim_back
+{
+from{margin-left: 365px;}
+to {margin-left: 0px;}
+}
+/*для Opera*/
+@-o-keyframes anim
+{
+ from {margin-left:0px;}
+ to {margin-left: 365px;}
+ }
+ @-o-keyframes anim_back
+{
+from{margin-left: 365px;}
+to {margin-left: 0px;}
+}
+/*для Google Chrome*/
+@-webkit-keyframes anim{
+from {margin-left:0px;}
+to {margin-left: 365px;}
+}
+@-webkit-keyframes anim_back
+{
+from{margin-left: 365px;}
+to {margin-left: 0px;}
+}
+.run {
+/* animation - вызывает анимацию.*/
+ animation:anim 15s forwards;
+ -webkit-animation:anim 15s forwards;
+ -moz-animation:anim 15s forwards;
+ -o-animation:anim 15s forwards;
+}
+/*anim - анимация, которую мы требуем использовать.
+15s - длительность перемещения.
+infinite - анимация будет каждый раз повторяться заново.*/
+.circle
+{
+ background: #5ef623; /* Цвет фона */
+ box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени <сдвиг по x> <сдвиг по y> <радиус
+размытия> <растяжение> <цвет>*/
+ border-radius:150px;
+ width:250px;
+ height:250px;
+ float: right
+ }
